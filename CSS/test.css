@@ -1,0 +1,11 @@
+.btn{
+  background-color: #eee;
+}
+
+.btn ::before {
+  background-color: red;
+}
+
+.btn ::after {
+  background-color: #222;
+}

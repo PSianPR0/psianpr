@@ -1,0 +1,346 @@
+body {
+  background-color: #222;
+    margin:0px;
+    font-family: "Cairo", sans-serif;
+}
+
+/*الشريط العلوي ⬇*/
+.header {
+    position: fixed;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 10px;
+    top: 0;
+    width: 100%;
+
+}
+
+.Logo {
+    width: 60px;
+}
+.header-links a{
+    color: white;
+    padding: 5px 15px;
+    text-decoration: none;
+    border-radius: 15px;
+}
+.header-links a:hover {
+   border-bottom-style:solid ;
+   border-color: #236690;
+   border-radius: 0px;
+   border-width: 2px;
+}
+/*الشريط العلوي ⬆*/
+
+/*العنوان ⬇*/
+.landing-page {
+    display: flex;
+    background-color:#181818  ;
+    justify-content: center  ;
+    align-items: center;
+    padding:100px 40px 15px;
+    color: white;
+    
+}
+
+.landing-page .logo {
+    width: 300px;
+}
+
+.address h3{
+  color: #eee;
+  font-weight: lighter;
+  background-color: #236690;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 0 0 50px 50px;
+}
+/*العنوان ⬆*/
+
+
+
+/*عناصر ⬇*/
+button {
+ font-size: 17px;
+ padding: 0.5em 2em;
+ border: transparent;
+ box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+ background: #236690;
+ color: white;
+ border-radius: 4px;
+}
+
+button:hover {
+ background: rgb(2,0,36);
+ background: linear-gradient(90deg, rgb(102, 204, 153) 0%, rgb(35, 102, 144) 100%);
+ 
+}
+
+button:active {
+ transform: translate(0em, 0.2em);
+}
+
+
+.btn {
+    background-color: #102e41 ;
+    border-radius: 10px;
+    padding: 5px 15px;
+    color: white;
+    border: none;
+    font-family: "Cairo", sans-serif;
+}
+
+.btn:hover {
+    background-color: #174461 ;
+}
+
+a {
+  text-decoration: none;
+}
+
+a :hover {
+  text-decoration:underline;
+}
+
+hr {
+  margin: 10;
+  border-color: #181818;
+  border-style:solid;
+}
+/*عناصر ⬆*/
+
+
+.content {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+}
+
+
+.card-info {
+  width: 500px;
+}
+
+.address-info {
+  color: #ddd;
+  display: flex;
+  background-color: #181818;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px 20px 0 0;
+}
+
+.address-info img {
+  width: 35px;
+  padding-right: 10px;
+}
+
+.c-info {
+  display: flex;
+  background-color: #1d1d1d ;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #888888;
+}
+
+.c-info .info-1 {
+  color: #ddd;
+}
+
+.c-info .info-2 {
+  color: #888888;
+}
+
+#c-info-0 {
+  border-radius: 0 0 20px 20px;
+}
+
+.content-download {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-self: center;
+}
+
+.address-text {
+  display: grid;
+  justify-items: right;
+}
+
+
+
+.address-text span {
+  color: #ddd;
+  padding-top: 50px;
+  padding-right: 30px;
+}
+
+.download {
+  display: flex;
+}
+
+.download img {
+  width: 200px;
+  padding: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/*Dialog ⬇*/
+.dial {
+  background-color: #181818f8;
+  color: #eee;
+  border-style:solid;
+  border-color: #222;
+  border-radius: 20px;
+  width: 800px;
+}
+
+.dial hr {
+  border-color: #222;
+}
+
+.dial .close {
+  width: 60px;
+  cursor: pointer;
+}
+
+.dial .info {
+  display: grid;
+  padding-bottom: 10px;
+}
+
+.dial .info h3 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+.dial .info span {
+  color: #888888;
+}
+
+
+.dial .dow img {
+  width: 200px;
+  padding: 0px 10px 0px 10px;
+}
+/*Dialog ⬆*/
+
+
+
+/*إصدارات سابقة ⬇*/
+.previous-versions {
+  justify-items: right;
+  padding: 20px;
+  color: #eee;
+}
+
+.versions {
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.versions span {
+ cursor: pointer;
+ margin: 5px;
+ padding: 5px;
+ background-color: #181818;
+ border-radius: 15px;
+ border-style:solid;
+ border-color: #236690;
+ border-width: 2px;
+}
+
+.versions span:hover {
+  color: #236690;
+  border-style:outset;
+}
+/*إصدارات سابقة ⬆*/
+
+
+/*برامج مقترحة ⬇*/
+.suggested-programs {
+  color: #eee;
+}
+
+.suggested-cards {
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px;
+  gap: 20px;
+
+}
+
+.suggested-card {
+  margin: 0px;
+  width: 300px;
+  height:130px;
+  display: flex;
+  background-color: #181818;
+  border-radius: 30px 15px 15px 30px;
+  cursor: pointer;
+}
+
+.suggested-card:hover {
+  transform:scale(1.01);
+  z-index:2;
+  background-color: #131313;
+}
+
+.suggested-card-text {
+  width: 300px;
+  display: grid;
+}
+
+.suggested-card img {
+  width: 130px;
+  height: 130px;
+}
+
+.suggested-card-text a {
+  padding: 10px;
+  margin: 0;
+  justify-self: left;
+}
+
+.suggested-card-text span {
+  color: #888888;
+  justify-self: end;
+  padding-right: 10px;
+}
+/*برامج مقترحة ⬆*/
+.bottom {
+    background-color: #181818;
+    color: white;
+    width: 100%;
+    height:fit-content;
+    padding: 15px;
+}
+
+.center {
+    justify-content:center;
+    display: flex;
+}
+
+.bottom a {
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.bottom a:hover {
+    text-decoration:underline;
+    color:#dddddd
+}
+
+.bottom img {
+    width: 70px;
+    padding: 20px;
+}
