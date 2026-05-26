@@ -20,9 +20,10 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-//Dialog Download Photoshop
+
+//Dialog Download
 const v1 = document.getElementById("v1");
-const v1Dialog = document.querySelector("[v1='photoshop1']");
+const v1Dialog = document.querySelector("[v1='dialdown1']");
 const closeBtns = document.querySelectorAll(".close");
 v1.addEventListener("click", () => {
   v1Dialog.showModal();
@@ -34,7 +35,7 @@ v1.addEventListener("click", () => {
   });
 
 const v2 = document.getElementById("v2");
-const v2Dialog = document.querySelector("[v2='photoshop2']");
+const v2Dialog = document.querySelector("[v2='dialdown2']");
 v2.addEventListener("click", () => {
   v2Dialog.showModal();
     closeBtns.forEach((btn) => {
@@ -45,7 +46,7 @@ v2.addEventListener("click", () => {
   });
 
   const v3 = document.getElementById("v3");
-const v3Dialog = document.querySelector("[v3='photoshop3']");
+const v3Dialog = document.querySelector("[v3='dialdown3']");
 v3.addEventListener("click", () => {
   v3Dialog.showModal();
     closeBtns.forEach((btn) => {
@@ -56,7 +57,7 @@ v3.addEventListener("click", () => {
   });
 
   const v4 = document.getElementById("v4");
-const v4Dialog = document.querySelector("[v4='photoshop4']");
+const v4Dialog = document.querySelector("[v4='dialdown4']");
 v4.addEventListener("click", () => {
   v4Dialog.showModal();
     closeBtns.forEach((btn) => {
@@ -67,9 +68,53 @@ v4.addEventListener("click", () => {
   });
 
   const v5 = document.getElementById("v5");
-const v5Dialog = document.querySelector("[v5='photoshop5']");
+const v5Dialog = document.querySelector("[v5='dialdown5']");
 v5.addEventListener("click", () => {
   v5Dialog.showModal();
+    closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+});
+  });
+  });
+
+    const v6 = document.getElementById("v6");
+const v6Dialog = document.querySelector("[v6='dialdown6']");
+v6.addEventListener("click", () => {
+  v6Dialog.showModal();
+    closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+});
+  });
+  });
+
+  const v7 = document.getElementById("v7");
+const v7Dialog = document.querySelector("[v7='dialdown7']");
+v7.addEventListener("click", () => {
+  v7Dialog.showModal();
+    closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+});
+  });
+  });
+
+  const v8 = document.getElementById("v8");
+const v8Dialog = document.querySelector("[v8='dialdown8']");
+v8.addEventListener("click", () => {
+  v8Dialog.showModal();
+    closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+});
+  });
+  });
+
+    const v9 = document.getElementById("v9");
+const v9Dialog = document.querySelector("[v9='dialdown9']");
+v9.addEventListener("click", () => {
+  v9Dialog.showModal();
     closeBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     btn.parentElement.close();

@@ -42,7 +42,6 @@ body {
     align-items: center;
     padding:100px 40px 15px;
     color: white;
-    
 }
 
 .landing-page .logo {
@@ -56,6 +55,7 @@ body {
   padding: 10px;
   margin: 0px;
   border-radius: 0 0 50px 50px;
+  
 }
 /*العنوان ⬆*/
 
@@ -107,6 +107,12 @@ a :hover {
 hr {
   margin: 10;
   border-color: #181818;
+  border-style:solid;
+}
+
+.hrwhite {
+  margin: 0px;
+  border-color: #eee;
   border-style:solid;
 }
 /*عناصر ⬆*/
@@ -219,6 +225,11 @@ hr {
   font-weight: normal;
 }
 
+.dial .info h4 {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
 .dial .info span {
   color: #888888;
 }
@@ -228,6 +239,13 @@ hr {
   width: 200px;
   padding: 0px 10px 0px 10px;
 }
+
+
+.logodia img {
+  width: 100px;
+}
+
+
 /*Dialog ⬆*/
 
 
@@ -240,9 +258,10 @@ hr {
 }
 
 .versions {
-  display: flex;
+  display:flex;
   flex-wrap: wrap-reverse;
 }
+
 
 .versions span {
  cursor: pointer;
@@ -280,7 +299,7 @@ hr {
 
 .suggested-card {
   margin: 0px;
-  width: 300px;
+  width: 350px;
   height:130px;
   display: flex;
   background-color: #181818;
@@ -293,6 +312,7 @@ hr {
   z-index:2;
   background-color: #131313;
 }
+
 
 .suggested-card-text {
   width: 300px;
@@ -308,6 +328,7 @@ hr {
   padding: 10px;
   margin: 0;
   justify-self: left;
+  color: #eee;
 }
 
 .suggested-card-text span {
@@ -342,5 +363,14 @@ hr {
 
 .bottom img {
     width: 70px;
-    padding: 20px;
+    padding: 10px;
+}
+
+.social-bottom img {
+    width: 40px;
+}
+
+.social-bottom img:hover {
+    transform:scale(1.05);
+    z-index:2;
 }

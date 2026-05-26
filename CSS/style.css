@@ -2,6 +2,7 @@
         background-color: #222;
     margin:0px;
     font-family: "Cairo", sans-serif;
+    
 }
 .header {
     position: fixed;
@@ -32,11 +33,13 @@
 
 .header .in {
     color: #236690;
+    cursor: pointer;
 }
 
 .header .in:hover {
     border-style:none;
 }
+
 
 button {
  padding: 0.5em 2em;
@@ -69,7 +72,13 @@ button:active {
     padding:200px 5px 15px;
     color: white;
     border-radius: 0 0 50px 50px;
-    
+    display:flex;
+    justify-content: center;
+}
+
+.landing-page h2 {
+    font-weight: lighter;
+    color: #828282;
 }
 
 .landing-page-search {
@@ -115,13 +124,18 @@ button:active {
     
 }
 
+.content button{
+    cursor:pointer;
+}
+
 
 .card {
     width: 200px;
+    height: 290px;
     justify-content: space-between;
     background-color: #181818;
     align-items: center;
-    border-radius: 30px 30px 15px 15px;
+    border-radius: 50px 50px 20px 20px;
     font-size: 15px;
     text-decoration:none;
     color: #eee;
@@ -132,6 +146,7 @@ button:active {
 
 .card img {   
     width: 200px;
+    height: 200px;
 }
 
 .card img:hover {
@@ -177,13 +192,33 @@ button:active {
     font-weight:bold;
     margin-top: 0px;
     margin-bottom: 0px;
-    
-
+}
+.v {
+    text-decoration: none;
+    font-weight:bolder;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #828282;
+    font-size:small;
+}
+.n {
+    font-size: 14px;
 }
 
-.hr1 {
-    margin-top: 2.5%;
+
+hr {
+  margin: 10;
+  border-color: #181818;
+  border-style:solid;
 }
+
+.hrwhite {
+  margin: 0px;
+  border-color: #eee;
+  border-style:solid;
+}
+
+
 
 .bottom {
     background-color: #181818;
@@ -211,9 +246,14 @@ button:active {
 
 .bottom img {
     width: 70px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .social-bottom img {
     width: 40px;
+}
+
+.social-bottom img:hover {
+    transform:scale(1.05);
+    z-index:2;
 }
