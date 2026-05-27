@@ -1,0 +1,146 @@
+/* الحاوية الرئيسية للبحث */
+.search-box {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #181818;
+    border-radius: 20px;
+    border: 2px solid #333;
+    transition: width 0.4s ease, border-color 0.3s;
+    overflow: visible; /* للسماح بظهور القائمة المنسدلة */
+    display: flex;
+    align-items: center;
+}
+
+/* الحقل الافتراضي يكون مخفياً وعرضه صفر */
+#searchInput {
+    width: 0;
+    padding: 0;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+    transition: width 0.4s ease, padding 0.4s ease;
+    direction: rtl;
+    font-family: var(--font-family);
+    color: #CCC;
+}
+
+/* عندما تصبح الحاوية نشطة (مفتوحة) */
+.search-box.active {
+    width: 260px;
+    border-color: #236690;
+    padding: 0 10px;
+}
+
+.search-box.active #searchInput {
+    width: 100%;
+    padding: 0 45px 0 10px; /* ترك مساحة للأيقونة على اليمين */
+}
+
+/* تصميم أيقونة العدسة باستخدام CSS */
+.search-icon {
+    position: absolute;
+    right: 8px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon .circle {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    transition: 0.3s;
+}
+
+.search-icon .handle {
+    width: 2px;
+    height: 8px;
+    background: #333;
+    position: absolute;
+    bottom: 2px;
+    left: 4px;
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+/* تغيير لون العدسة عند فتح البحث */
+.search-box.active .search-icon .circle { border-color: #236690; }
+.search-box.active .search-icon .handle { background: #236690; }
+
+/* تنسيق قائمة النتائج المنبثقة */
+.search-results {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    background: #121212;
+    border: 1px solid #282828;
+    border-radius: 15px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.search-results a {
+    display: block;
+    padding: 12px;
+    color: #eee;
+    text-decoration: none;
+    text-align: right;
+    border-bottom: 1px solid #282828;
+    
+}
+
+.search-results a:hover {
+    background-color: #111111;
+}
+
+.search-results img {
+    width: 30px;
+    max-height: 30px;
+    vertical-align: middle;
+    margin: 0px;
+    display: inline-flex;
+    float: left;
+
+}
+
+/* 1. تخصيص شريط التمرير بالكامل */
+.search-results::-webkit-scrollbar {
+    width: 6px; /* جعل الشريط نحيفاً وأنيقاً */
+}
+
+/* 2. خلفية المجرى الذي يتحرك فيه الشريط */
+.search-results::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; /* زوايا دائرية للمجرى */
+}
+
+/* 3. الجزء المتحرك (المقبض الذي يسحبه المستخدم) */
+.search-results::-webkit-scrollbar-thumb {
+    background: #181818; 
+    border-radius: 10px; /* زوايا دائرية للمقبض */
+    transition: background 0.3s ease;
+}
+
+/* 4. تغيير لون المقبض عند تمرير الماوس فوقه ليصبح تفاعلياً */
+.search-results::-webkit-scrollbar-thumb:hover {
+    background: #236690; /* يتغير للون الأزرق ليتماشى مع لون البحث */
+}
+
+/* دعم متصفح فايرفوكس (Firefox) */
+.search-results {
+    scrollbar-width: thin; /* جعل الشريط نحيفاً في فايرفوكس */
+    scrollbar-color: #282828 #181818; /* لون المقبض ثم لون الخلفية */
+}
