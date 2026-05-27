@@ -1,0 +1,26 @@
+<!--Dialog↓-->
+  <button id="v1"><code>2024 (v25.2.0.196)</code></button>
+<!--Dialog-->
+  <dialog class="dial" v1="photoshop1">
+  <img class="close" src="/Images/Close.png">
+  <center><span class="span-dial">اختر نوع ملف التحميل</span>
+    <hr>
+    <span class="info">تحميل برنامج الفوتوشوب</span>
+    <span class="info">2024 (v25.2.0.196)</span>
+  <a href=""><img class="dow" src="/Images/zip.png"></a>
+  <a href=""><img class="dow" src="/Images/µTorrent.png"></a>
+  </center>
+</dialog>
+<!--Dialog for javascript↓-->
+const v1 = document.getElementById("v1");
+const v1Dialog = document.querySelector("[v1='photoshop1']");
+const closeBtns = document.querySelectorAll(".close");
+v1.addEventListener("click", () => {
+  v1Dialog.showModal();
+      closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    btn.parentElement.close();
+});
+  });
+});
+<!--Dialog↑-->
