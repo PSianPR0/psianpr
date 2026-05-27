@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const searchPlaceholder = document.getElementById("search-component");
     if (!searchPlaceholder) return;
 
-    fetch("search.html")
+    fetch("/search.html")
         .then(response => response.text())
         .then(data => {
             searchPlaceholder.innerHTML = data;
