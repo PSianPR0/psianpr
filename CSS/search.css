@@ -88,7 +88,7 @@
     display: none;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    max-height: 200px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
@@ -143,4 +143,22 @@
 .search-results {
     scrollbar-width: thin; /* جعل الشريط نحيفاً في فايرفوكس */
     scrollbar-color: #282828 #181818; /* لون المقبض ثم لون الخلفية */
+}
+
+.no-results {
+    display: none; /* مخفية افتراضيًا وتظهر فقط بالجافا سكريبت */
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+    background: #181818;
+    color: #828282; /* لون أحمر جذاب */
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #282828;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin: 0;
+    font-size: 14px;
+    z-index: 1000;
 }

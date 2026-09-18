@@ -1,0 +1,59 @@
+hr {
+  margin: 10;
+  border-color: #181818;
+  border-style:solid;
+}
+
+.hrwhite {
+  margin: 0px;
+  border-color: #828282;
+  border-style:solid;
+}
+
+
+
+.bottom {
+    background-color: #181818;
+    color: white;
+    width: 100%;
+    height:fit-content;
+    padding: 15px;
+
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/Background2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    border-top: 5px solid #181818;
+}
+
+.center {
+    justify-content:center;
+    display: flex;
+}
+
+.bottom a {
+    color:#ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.bottom a:hover {
+    text-decoration:underline;
+    color:#dddddd
+}
+
+.bottom img {
+    width: 70px;
+    padding: 10px;
+}
+
+.social-bottom img {
+    width: 40px;
+}
+
+.social-bottom img:hover {
+    transform:scale(1.03) ;/* تكبير الكارد بالكامل بنسبة 2% (يمكنك تعديلها لـ 1.01 حسب رغبتك) */
+    z-index: 5; /* رفعه فوق الكروت المجاورة أثناء التكبير لكي لا يختفي تحتها */
+}

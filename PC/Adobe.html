@@ -4,7 +4,6 @@
     <title>Adobe Programs All Version - PSianPR</title>
     <link rel="icon" type="image/png" href="/Images/LOGO Website.png">
     <link rel="stylesheet" href="/CSS/adobe.css"/>
-    <link rel="stylesheet" href="/CSS/search.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
@@ -12,17 +11,38 @@
 
 <body>
         <!--الشريط العلوي-->
-    <nav class="header">
-        <img class="Logo" src="/Images/Logo Circle.png"/>
-        <div class="header-links">
-            <a href="/About.html">حول</a>
-            <a href="/Contactus.html">تواصل معنا</a>
-            <a href="/P.R-APK.html">P.R-APK</a>
-            <a href="/P.R-PC.html">P.R-PC</a>
-            <a href="/index.html">الرئيسية</a>
-        </div>
-<div id="search-component"></div>
-    </nav>
+<nav class="header">
+    <!-- 1. الجزء الأيسر: يحتوي على اللوجو وزر التطبيق -->
+    <div class="header-logo">
+        <a href="/index.html"><img class="Logo" src="/Images/Logo Circle.png"/></a>
+        <a href="/About.html" target="_blank">
+            <button title="JPTO for GTA">JPTO App 
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0,0,256,256">
+                    <g fill="#eeeeee" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g transform="scale(10.66667,10.66667)">
+                            <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- 2. الجزء الأوسط: النصوص ثابتة في السنتر تماماً مهما حدث -->
+    <div class="header-links">
+        <a href="/index.html">الرئيسية</a>
+        <a href="/P.R-PC.html">P.R-PC</a>
+        <a href="/P.R-APK.html">P.R-APK</a>
+        <a href="/About.html">حول</a>
+        <a href="/Contactus.html">تواصل معنا</a>
+        
+        
+        
+    </div>
+
+    <!-- 3. الجزء الأيمن: مكون البحث (العدسة) -->
+    <div id="search-component"></div>   
+</nav>
 
     <div class="landing-page">
     <center>
@@ -47,7 +67,7 @@
                 <span class="size">3.0GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/Photoshop.html">
+                <a href="/PC/Adobe/Photoshop.html" class="main-link">
             <span class="n">Adobe Photoshop 2026</span></a>
             <center class="v">(v27.7)</center>
             </div>
@@ -67,7 +87,7 @@
                 <span class="size">2.58GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/PremierePro.html">
+                <a href="/PC/Adobe/PremierePro.html" class="main-link">
             <span class="n">Adobe Premiere Pro 2026</span></a>
             <center class="v">(v26.2.2)</center>
             </div>
@@ -86,7 +106,7 @@
                 <span class="size">2.08GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/AfterEffects.html">
+                <a href="/PC/Adobe/AfterEffects.html" class="main-link">
             <span class="n">Adobe After Effects 2026</span></a>
             <center class="v">(v26.2.1)</center>
             </div>
@@ -105,7 +125,7 @@
                 <span class="size">1.82GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/MediaEncoder.html">
+                <a href="/PC/Adobe/MediaEncoder.html" class="main-link">
             <span class="n">Adobe Media Encoder 2026</span></a>
             <center class="v">(v26.2.2)</center>
             </div>
@@ -139,7 +159,7 @@
                 <span class="size">2.71GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/LightroomClassic.html">
+                <a href="/PC/Adobe/LightroomClassic.html" class="main-link">
             <span class="n">Adobe Lightroom Classic 2026</span></a>
             <center class="v">(v15.3)</center>
             </div>
@@ -158,7 +178,7 @@
                 <span class="size">1.81GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/Illustrator.html">
+                <a href="/PC/Adobe/Illustrator.html" class="main-link">
             <span class="n">Adobe Illustrator 2026</span></a>
             <center class="v">(v30.4)</center>
             </div>
@@ -177,7 +197,7 @@
                 <span class="size">2.2GB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/Dimension.html">
+                <a href="/PC/Adobe/Dimension.html" class="main-link">
             <span class="n">Adobe Dimension 2026</span></a>
             <center class="v">(v4.1.8)</center>
             </div>
@@ -196,7 +216,7 @@
                 <span class="size">729MB</span>
             </div>
             <div class="card-name">
-                <a href="/PC/Adobe/Audition.html">
+                <a href="/PC/Adobe/Audition.html" class="main-link">
             <span class="n">Adobe Audition 2026</span></a>
             <center class="v">(v26.0)</center>
             </div>
@@ -218,30 +238,7 @@
 
 
 
-<hr class="hrwhite"/>
-
-<div class="bottom">
-        <div  class="copyright">
-            <center><span><a href="" title="P.R حول">PSianPR</a>جميع الحقوق محفوظة لـ</span></center>
-        </div>
-        <center>
-            <img src="/Images/LOGO W.png">
-        </center>
-        <center class="social-bottom">
-            <a href="https://www.facebook.com/psianpr" target="_blank" title="Facebook Page">
-                <img src="/Images/social/Facebook(eeeeee).png"></a>
-
-            <a href="https://t.me/psianprco" target="_blank" title="Telegram Channel">
-                <img src="/Images/social/Telegram(eeeeee).png"></a>
-
-            <a href="https://www.youtube.com/channel/UCyWGgpULsVZaA1uPqZ3IJIA" target="_blank" title="YouTube Channel">
-                <img src="/Images/social/youtube(eeeeee).png"></a>
-        </center>
-        
-        
-</div>
-
-
-
+<bottom-p></bottom-p>
 <script src="/javascript/search.js"></script>
+<script src="/javascript/bottom.js"></script>
 </body>

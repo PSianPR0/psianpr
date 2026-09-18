@@ -13,17 +13,38 @@
 <body>
 
     <!--الشريط العلوي-->
-    <nav class="header">
+<nav class="header">
+    <!-- 1. الجزء الأيسر: يحتوي على اللوجو وزر التطبيق -->
+    <div class="header-logo">
         <a href="/index.html"><img class="Logo" src="/Images/Logo Circle.png"/></a>
-        <div class="header-links">
-            <a href="/About.html">حول</a>
-            <a href="/Contactus.html">تواصل معنا</a>
-            <a href="/P.R-APK.html">P.R-APK</a>
-            <a href="/P.R-PC.html">P.R-PC</a>
-            <a href="/index.html">الرئيسية</a>
-        </div>
-<div id="search-component"></div>
-    </nav>
+        <a href="/About.html" target="_blank">
+            <button title="JPTO for GTA">JPTO App 
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0,0,256,256">
+                    <g fill="#eeeeee" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g transform="scale(10.66667,10.66667)">
+                            <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- 2. الجزء الأوسط: النصوص ثابتة في السنتر تماماً مهما حدث -->
+    <div class="header-links">
+        <a href="/index.html">الرئيسية</a>
+        <a href="/P.R-PC.html">P.R-PC</a>
+        <a href="/P.R-APK.html">P.R-APK</a>
+        <a href="/About.html">حول</a>
+        <a href="/Contactus.html">تواصل معنا</a>
+        
+        
+        
+    </div>
+
+    <!-- 3. الجزء الأيمن: مكون البحث (العدسة) -->
+    <div id="search-component"></div>   
+</nav>
 
     <!--العنوان-->
 <div class="landing-page">
@@ -31,11 +52,13 @@
         <div><img class="logo" src="/Images/P.R-PC/Programs/Revo Uninstaller Pro/Icon.png" /></div>
         <h1>Revo Uninstaller Pro All Version</h1>
     </center>
-    </div>
-
-    <center class="address">
+            <center class="address">
       <h3>تحميل برنامج ريفو انستولر برو مفعل مدى الحياة </h3>
     </center>
+    </div>
+
+
+
     
     <!--المحتوى-->
 <div class="content">
@@ -111,32 +134,33 @@
     <div class="suggested-card">
       <a href="/PC/Adobe/PremierePro.html"><img src="/Images/P.R-PC/Programs/Adobe/Premiere Pro/Icon.png" alt=""></a>
       <div class="suggested-card-text">
-      <a href="/PC/Adobe/PremierePro.html">Adobe Premiere Pro</a>
-      <a href="/PC/Adobe/PremierePro.html">v26.2.2</a>
+      <a href="/PC/Adobe/PremierePro.html" class="main-link">Adobe Premiere Pro</a>
+      <a>v26.2.2</a>
       <span>2.6GB</span>
       </div>
     </div>
-        <div class="suggested-card">
-      <a href="Camtasia.html"><img src="/Images/P.R-PC/Programs/Camtasia Studio/Camtasia 2026/Icon.png" alt=""></a>
+        
+    <div class="suggested-card">
+      <a href="/PC/Programs/Camtasia.html"><img src="/Images/P.R-PC/Programs/Camtasia Studio/Camtasia 2026/Icon.png" alt=""></a>
       <div class="suggested-card-text">
-      <a href="Camtasia.html">Camtasia 2026</a>
-      <a href="Camtasia.html">v26.0.0</a>
+      <a href="/PC/Programs/Camtasia.html" class="main-link">Camtasia 2026</a>
+      <a>v26.0.0</a>
       <span>264MB</span>
       </div>  
     </div>
        <div class="suggested-card">
-      <a href="idm.html"><img src="/Images/P.R-PC/Programs/forDdownload/Internet Download Manager/Icon.png" alt=""></a>
+      <a href="/PC/Programs/idm.html"><img src="/Images/P.R-PC/Programs/Internet Download Manager/Icon.png" alt=""></a>
       <div class="suggested-card-text">
-      <a href="idm.html">Internet Download Manager</a>
-      <a href="idm.html">v6.42</a>
+      <a href="/PC/Programs/idm.html" class="main-link">Internet Download Manager</a>
+      <a>v6.42</a>
       <span>12MB</span>
       </div>  
     </div>
        <div class="suggested-card">
       <a href="/PC/Adobe/Photoshop.html"><img src="/Images/P.R-PC/Programs/Adobe/Photoshop/Icon.png" alt=""></a>
       <div class="suggested-card-text">
-      <a href="/PC/Adobe/Photoshop.html">Adobe Photoshop</a>
-      <a href="/PC/Adobe/Photoshop.html">v27.7</a>
+      <a href="/PC/Adobe/Photoshop.html" class="main-link">Adobe Photoshop</a>
+      <a>v27.7</a>
       <span>3.0GB</span>
       </div>  
     </div>
@@ -154,38 +178,19 @@
   <center><span class="span-dial">اختر نوع ملف التحميل</span>
     <hr>
     <div class="info">
-    <h3>تحميل برنامج لايت روم كلاسيك</h3>
+    <h3>تحميل برنامج ريفو انستولر برو</h3>
     <span>v4.5.0.0</span>
   </div>
   <div class="dow">
-  <a href="" target="_blank"><img src="/Images/zip.png"></a>
-  <a href="https://www.up-4ever.net/4mtm3ytml5ql" target="_blank"><img src="/Images/µTorrent.png"></a>
+  <a class="download-link" href="" target="_blank"><img src="/Images/zip.png"></a>
+  <a class="download-link" href="" target="_blank"><img src="/Images/µTorrent.png"></a>
   </div>
   </center>
 </dialog>
 
 
-<hr class="hrwhite">
-<div class="bottom">
-        <div  class="copyright">
-            <center><span><a href="" title="P.R حول">PSianPR</a>جميع الحقوق محفوظة لـ</span></center>
-            
-        </div>
-        <center>
-            <img src="/Images/LOGO W.png">
-        </center>
-                <center class="social-bottom">
-            <a href="https://www.facebook.com/psianpr" target="_blank" title="Facebook Page">
-                <img src="/Images/social/Facebook(eeeeee).png"></a>
-
-            <a href="https://t.me/psianprco" target="_blank" title="Telegram Channel">
-                <img src="/Images/social/Telegram(eeeeee).png"></a>
-
-            <a href="https://www.youtube.com/channel/UCyWGgpULsVZaA1uPqZ3IJIA" target="_blank" title="YouTube Channel">
-                <img src="/Images/social/YouTube(eeeeee).png"></a>
-        </center>
-
-</div>
+<bottom-p></bottom-p>
 <script src="/javascript/programs.js"></script>
 <script src="/javascript/search.js"></script>
+<script src="/javascript/bottom.js"></script>
 </body>

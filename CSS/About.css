@@ -1,43 +1,106 @@
-    body {
+html {
+    scroll-behavior: smooth; /* تفعيل الحركة الانسيابية عند الانتقال */
+}
+
+/* إخفاء الإطار الأبيض عند الضغط أو التحديد لزر الـ zip */
+.search-results a:focus, 
+.card a:focus,
+img:focus,
+a:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important; /* لضمان إزالة أي ظلال زرقاء أو بيضاء افتراضية من المتصفح */
+}
+
+body {
         background-color: #222;
     margin:0px;
     font-family: "Cairo", sans-serif;
-    
+    padding-top: 75px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/bg.jpg');
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+/* الحاوية الرئيسية للهيدر */
 .header {
     position: fixed;
-    background-color: #121212;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px 10px;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-
-}
-.Logo {
-    width: 60px;
-}
-.header-links a{
-    color: white;
-    padding: 5px 15px;
-    text-decoration: none;
-    border-radius: 15px;
-}
-.header-links a:hover {
-   border-bottom-style:inset ;
-   border-color: #236690;
-   border-radius: 0px;
-   border-width: 2px;
+    height: 75px; /* الارتفاع الثابت المتناسق مع الهامش العلوي لموقعك */
+    z-index: 9999;
+    background-color: #111; /* يمكنك تغييره للون الخلفية المناسب لك */
+    
+    /* تفعيل الـ Flexbox الثلاثي الذكي */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    direction: ltr; /* لضمان توزيع (اللوجو يسار) و (البحث يمين) بالتساوي على أطراف الشاشة */
 }
 
-.header .in {
-    color: #236690;
+/* الجزء الأيسر (اللوجو والزر) */
+.header-logo {
+    flex: 1; /* حجز مساحة مرنة متساوية مع جهة البحث */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* مسافة ناعمة بين اللوجو والزر */
+    justify-content: flex-start;
+}
+
+/* تنسيق اللوجو وزر التطبيق للحفاظ على أحجامهم */
+.header-logo .Logo {
+    height: 45px;
+    width: auto;
+    padding-right: 50px;
+}
+.header-logo button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     cursor: pointer;
 }
 
-.header .in:hover {
-    border-style:none;
+/* الجزء الأيمن (مكون البحث) */
+#search-component {
+    flex: 1; /* حجز مساحة مرنة متساوية مع جهة اللوجو */
+    display: flex;
+    justify-content: flex-end; /* دفع مربع البحث أو العدسة لأقصى اليمين */
+    align-items: center;
+}
+
+/* الجزء الأوسط (النصوص والروابط الرئيسية) */
+.header-links {
+    flex: 2; /* إعطاء مساحة أكبر للوسط ليتسع للنصوص دون أن تنضغط */
+    display: flex;
+    justify-content: center; /* سنتر النصوص في منتصف الشاشة الحقيقي تماماً */
+    align-items: center;
+    gap: 25px; /* المسافة الثابتة بين كل رابط والآخر */
+    direction: rtl; /* لجعل قراءة النصوص من اليمين لليسار (الرئيسية أولاً) */
+}
+
+/* تنسيق روابط النصوص */
+.header-links a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap; /* يمنع النصوص من النزول لسطر جديد على الشاشات المتوسطة */
+    transition: color 0.3s ease;
+}
+
+.header-links a:hover, .header-links a.in {
+    color: #236690; /* اللون الملون عند وضع الماوس أو في الصفحة النشطة */
+    cursor: pointer;
+}
+
+
+a {
+    text-decoration: none;
 }
 
 
@@ -74,6 +137,12 @@ button:active {
     border-radius: 0 0 50px 50px;
     display:flex;
     justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    border-bottom: 5px solid #181818;
 }
 
 .landing-page h2 {

@@ -12,17 +12,38 @@
 
 <body>
     <!--الشريط العلوي-->
-    <nav class="header">
-        <a href="/index.html"><img class="Logo" src="/Images/Logo Circle.png"/></a>
-        <div class="header-links">
-            <a href="About.html">حول</a>
-            <a class="in">تواصل معنا</a>
-            <a href="P.R-APK.html">P.R-APK</a>
-            <a href="P.R-PC.html">P.R-PC</a>
-            <a  href="index.html">الرئيسية</a>
-        </div>
-<div id="search-component"></div>
-    </nav>
+<nav class="header">
+    <!-- 1. الجزء الأيسر: يحتوي على اللوجو وزر التطبيق -->
+    <div class="header-logo">
+        <a href="/index.html"><img class="Logo" src="Images/Logo Circle.png"/></a>
+        <a href="/About.html" target="_blank">
+            <button title="JPTO for GTA">JPTO App 
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0,0,256,256">
+                    <g fill="#eeeeee" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                        <g transform="scale(10.66667,10.66667)">
+                            <path d="M5,3c-1.09306,0 -2,0.90694 -2,2v14c0,1.09306 0.90694,2 2,2h14c1.09306,0 2,-0.90694 2,-2v-7h-2v7h-14v-14h7v-2zM14,3v2h3.58594l-9.29297,9.29297l1.41406,1.41406l9.29297,-9.29297v3.58594h2v-7z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- 2. الجزء الأوسط: النصوص ثابتة في السنتر تماماً مهما حدث -->
+    <div class="header-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="P.R-PC.html">P.R-PC</a>
+        <a href="P.R-APK.html">P.R-APK</a>
+        <a href="About.html">حول</a>
+        <a class="in">تواصل معنا</a>
+        
+        
+        
+    </div>
+
+    <!-- 3. الجزء الأيمن: مكون البحث (العدسة) -->
+    <div id="search-component"></div>   
+</nav>
     
 <!--الوسط-->
 <div class="landing-page">
@@ -38,4 +59,5 @@
 <h2>PSianPR - تواصل معنا</h2>
 
 <script src="/javascript/search.js"></script>
+<script src="/javascript/bottom.js"></script>
 </body>

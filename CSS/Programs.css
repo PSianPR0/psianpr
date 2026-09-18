@@ -1,47 +1,127 @@
+html {
+    scroll-behavior: smooth; /* تفعيل الحركة الانسيابية عند الانتقال */
+}
+
+/* إخفاء الإطار الأبيض عند الضغط أو التحديد لزر الـ zip */
+.search-results a:focus, 
+.card a:focus,
+img:focus,
+a:focus,
+button:focus {
+    outline: none !important;
+    box-shadow: none !important; /* لضمان إزالة أي ظلال زرقاء أو بيضاء افتراضية من المتصفح */
+}
+
 body {
   background-color: #222;
     margin:0px;
     font-family: "Cairo", sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/bg.jpg');
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+
 
 /*الشريط العلوي ⬇*/
+/* الحاوية الرئيسية للهيدر */
 .header {
     position: fixed;
-    background-color: #121212;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 5px 10px;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-
+    height: 75px; /* الارتفاع الثابت المتناسق مع الهامش العلوي لموقعك */
+    z-index: 9999;
+    background-color: #111; /* يمكنك تغييره للون الخلفية المناسب لك */
+    
+    /* تفعيل الـ Flexbox الثلاثي الذكي */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-sizing: border-box;
+    direction: ltr; /* لضمان توزيع (اللوجو يسار) و (البحث يمين) بالتساوي على أطراف الشاشة */
 }
 
-.Logo {
-    width: 60px;
+/* الجزء الأيسر (اللوجو والزر) */
+.header-logo {
+    flex: 1; /* حجز مساحة مرنة متساوية مع جهة البحث */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* مسافة ناعمة بين اللوجو والزر */
+    justify-content: flex-start;
 }
-.header-links a{
-    color: white;
-    padding: 5px 15px;
+
+/* تنسيق اللوجو وزر التطبيق للحفاظ على أحجامهم */
+.header-logo .Logo {
+    height: 45px;
+    width: auto;
+    padding-right: 50px;
+}
+.header-logo button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* الجزء الأيمن (مكون البحث) */
+#search-component {
+    flex: 1; /* حجز مساحة مرنة متساوية مع جهة اللوجو */
+    display: flex;
+    justify-content: flex-end; /* دفع مربع البحث أو العدسة لأقصى اليمين */
+    align-items: center;
+}
+
+/* الجزء الأوسط (النصوص والروابط الرئيسية) */
+.header-links {
+    flex: 2; /* إعطاء مساحة أكبر للوسط ليتسع للنصوص دون أن تنضغط */
+    display: flex;
+    justify-content: center; /* سنتر النصوص في منتصف الشاشة الحقيقي تماماً */
+    align-items: center;
+    gap: 25px; /* المسافة الثابتة بين كل رابط والآخر */
+    direction: rtl; /* لجعل قراءة النصوص من اليمين لليسار (الرئيسية أولاً) */
+}
+
+/* تنسيق روابط النصوص */
+.header-links a {
+    color: #eeeeee;
     text-decoration: none;
-    border-radius: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap; /* يمنع النصوص من النزول لسطر جديد على الشاشات المتوسطة */
+    transition: color 0.3s ease;
 }
-.header-links a:hover {
-   border-bottom-style:solid ;
-   border-color: #236690;
-   border-radius: 0px;
-   border-width: 2px;
+
+.header-links a:hover, .header-links a.in {
+    color: #236690; /* اللون الملون عند وضع الماوس أو في الصفحة النشطة */
+    cursor: pointer;
 }
+
+
+a {
+    text-decoration: none;
+}
+
 /*الشريط العلوي ⬆*/
 
 /*العنوان ⬇*/
 .landing-page {
-    display: flex;
+
     background-color:#181818  ;
     justify-content: center  ;
     align-items: center;
     padding:100px 40px 15px;
-    color: white;
+    color: #eee;
+    border-radius: 0 0 50px 50px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
+    border-bottom: 5px solid #181818;
 }
 
 .landing-page .logo {
@@ -49,33 +129,40 @@ body {
 }
 
 .address h3{
-  color: #eee;
+  text-align: center; 
+  color: #828282;
   font-weight: lighter;
-  background-color: #236690;
-  padding: 10px;
-  margin: 0px;
-  border-radius: 0 0 50px 50px;
-  
+  margin-top: 50px;
+  margin-bottom: 0px;
+   text-decoration:underline;
+   text-decoration-color: #236690;
+   text-underline-offset: 10px;
 }
+
 /*العنوان ⬆*/
 
 
 
 /*عناصر ⬇*/
 button {
- font-size: 17px;
  padding: 0.5em 2em;
- border: transparent;
+ border: none;
  box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
- background: #236690;
+ background: #102e41;
  color: white;
- border-radius: 4px;
+ border-radius: 10px;
+ font-family: "Cairo", sans-serif;
+ padding: 5px 15px;
+ text-decoration: none;
 }
 
 button:hover {
  background: rgb(2,0,36);
  background: linear-gradient(90deg, rgb(102, 204, 153) 0%, rgb(35, 102, 144) 100%);
- 
+ text-decoration: none;
+    transform: scale(1.02); /* تكبير الكارد بالكامل بنسبة 2% (يمكنك تعديلها لـ 1.01 حسب رغبتك) */
+    z-index: 5; /* رفعه فوق الكروت المجاورة أثناء التكبير لكي لا يختفي تحتها */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* إضافة ظل ناعم يعطيه عمقاً جميلاً أثناء الارتفاع */
 }
 
 button:active {
@@ -100,19 +187,21 @@ a {
   text-decoration: none;
 }
 
-a :hover {
-  text-decoration:underline;
-}
 
 hr {
-  margin: 10;
-  border-color: #181818;
-  border-style:solid;
+    border: none;
+    height: 1px;
+    /* تدرج لوني يبدأ شفافاً، ثم يصبح فضياً في المنتصف، ثم يختفي في الطرف الآخر */
+    background-image: linear-gradient(to right, transparent, #236690, transparent);
+    margin: 50px 0;
+    width: 100%;
+    opacity: 0.6;
 }
+
 
 .hrwhite {
   margin: 0px;
-  border-color: #eee;
+  border-color: #828282;
   border-style:solid;
 }
 /*عناصر ⬆*/
@@ -137,6 +226,12 @@ hr {
   align-items: center;
   justify-content: center;
   border-radius: 20px 20px 0 0;
+      border-bottom: 2px solid #282828;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
 }
 
 .address-info img {
@@ -151,6 +246,11 @@ hr {
   justify-content: space-between;
   padding: 10px;
   border-bottom: 1px solid #888888;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/BG-header.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment:scroll;
 }
 
 .c-info .info-1 {
@@ -189,11 +289,19 @@ hr {
   display: flex;
 }
 
-.download img {
+.download img{
   width: 200px;
   padding: 15px;
   margin: 0;
   cursor: pointer;
+}
+
+
+
+.download img:hover, .download-link img:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+
 }
 
 /*Dialog ⬇*/
@@ -305,13 +413,25 @@ hr {
   background-color: #181818;
   border-radius: 30px 15px 15px 30px;
   cursor: pointer;
+      border-right: 2px solid #282828;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Images/BG-card.jpg');
+
 }
 
-.suggested-card:hover {
-  transform:scale(1.01);
-  z-index:2;
-  background-color: #131313;
+/* 1. إضافة تأثير الانتقال الناعم على الكارد في حالته الطبيعية */
+.suggested-card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* جعل الحركة انسيابية وناعمة */
+    z-index: 1; /* الطبقة الافتراضية للكارد */
 }
+
+/* 2. التأثير عند تمرير الماوس (Hover) على أي مكان في الكارد */
+.suggested-card:hover {
+    transform: scale(1.02); /* تكبير الكارد بالكامل بنسبة 2% (يمكنك تعديلها لـ 1.01 حسب رغبتك) */
+    z-index: 5; /* رفعه فوق الكروت المجاورة أثناء التكبير لكي لا يختفي تحتها */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* إضافة ظل ناعم يعطيه عمقاً جميلاً أثناء الارتفاع */
+}
+
 
 
 .suggested-card-text {
@@ -337,40 +457,46 @@ hr {
   padding-right: 10px;
 }
 /*برامج مقترحة ⬆*/
-.bottom {
-    background-color: #181818;
-    color: white;
-    width: 100%;
-    height:fit-content;
-    padding: 15px;
+
+/* عندما يتم استهداف العنصر */
+:target {
+    animation: highlightAnim 2s ease-in-out; /* تشغيل الحركة لمدة ثانيتين */
 }
 
-.center {
-    justify-content:center;
-    display: flex;
+/* برمجة حركة الوميض */
+@keyframes highlightAnim {
+    0% {
+        background-color: rgba(0, 123, 255, 0.3); /* لون أزرق خفيف في البداية */
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* توهج حول العنصر */
+    }
+    100% {
+        background-color: transparent; /* العودة للوضع الطبيعي في النهاية */
+        box-shadow: none;
+    }
 }
 
-.bottom a {
-    color:#ffffff;
-    text-decoration: none;
-    font-size: 17px;
+
+
+/* 1. جعل الكارد هو الحدود الأساسية لمنطقة الضغط */
+.suggested-card {
+    position: relative; /* خطوة إجبارية لكي لا يخرج الرابط خارج الكارد */
 }
 
-.bottom a:hover {
-    text-decoration:underline;
-    color:#dddddd
+/* 2. الكود السحري الذي يجعل الرابط يغطي الكارد بالكامل */
+.suggested-card .main-link::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* يجعله يغطي الكارد */
 }
 
-.bottom img {
-    width: 70px;
-    padding: 10px;
-}
-
-.social-bottom img {
-    width: 40px;
-}
-
-.social-bottom img:hover {
-    transform:scale(1.05);
-    z-index:2;
+/* 3. رفع الروابط الفرعية (مثل رابط الحجم أو القسم) فوق الرابط الكبير لتظل قابلة للضغط */
+.suggested-card .card-size a, 
+.suggested-card .sub-link,
+.suggested-card .badge {
+    position: relative;
+    z-index: 2; /* أعلى من 1، بالتالي عند الضغط عليها تفتح رابطها الخاص */
 }
